@@ -152,7 +152,89 @@ footer a:hover {
 
 /* Footer-end */
 
+/* Hero-start */
 
+
+.hero {
+    background-color: #999;
+    background-image: url(../images/images/fondo.jpg);
+    height: 60vh;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    /* Fusiona capa de background color con la background-image. */
+    color: white;
+    display: flex;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 2em;
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 1.25em;
+
+}
+
+.hero .boton {
+    display: inline-block;
+    /* El elemento se comporta como un bloque pero se puede poner en linea. */
+    background-color: var(--color-principal);
+    padding: 1.15em;
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--color-principal);
+}
+
+.hero :is(h2, .boton) {
+    margin: var(--margingrid) 0;
+}
+
+.hero p {
+    font-size: 1.15em;
+}
+
+.boton:hover {
+    background-color: transparent;
+}
+
+.boton i {
+    transition: 1s;
+}
+
+.boton:hover i {
+    transform: translateX(5px) scale(1.20);
+}
+
+.hero ul {
+    display: flex;
+    width: 10em;
+    justify-content: space-between;
+}
+
+.hero ul a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.hero ul a:hover {
+    color: var(--color-principal);
+    font-size: 3em;
+}
+
+
+/* Hero-end */
 
 
 
