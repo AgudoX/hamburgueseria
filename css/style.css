@@ -274,9 +274,59 @@ main section .underline hr {
     color: var(--color-principal);
 }
 
+
+main .grid article {
+    border: 0px;
+    border-bottom: 2px solid #aaa;
+
+}
+
+main .grid i:is(.fa-cogs, .fa-truck, .fa-heart) {
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+    font-size: 1.25em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+main .grid i.fa-truck {
+    transform: scaleX(-1);
+
+}
+
+main .grid h3 {
+    font-weight: 700;
+    font-size: 1em;
+    margin: 0.3em 0;
+}
+
+main .grid p {
+    color: var(--colorsecundario);
+    font-size: 0.8em;
+    margin: 0.5em 0em;
+
+}
+
+main .grid a {
+    display: block;
+    width: 100%;
+    color: var(--color-principal);
+    text-decoration: none;
+    margin: 0.8em 0;
+    font-weight: 700;
+}
+
 /* Our-Service-end */
 
+/* About-us-start */
 
+div.aboutus {
+    height: 100vh;
+}
+
+
+
+/* About-us-end */
 
 
 
@@ -285,7 +335,7 @@ main section .underline hr {
     /* 600px */
 }
 
-@media(min-width: 48em) {
+@media (min-width: 48em) {
     /* 768 px tablet grande, pantalla pequeña */
 
     header .nav-top a span {
@@ -296,6 +346,30 @@ main section .underline hr {
     footer {
         padding: 1.25em 1em;
         text-align: left;
+    }
+
+    main .grid article:last-child {
+        width: 100%;
+
+
+    }
+
+    main .grid {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main .grid article {
+        border: 0px;
+        height: auto;
+        width: 40%;
+        border-left: 2px solid #aaa;
+        margin: var(--margingrid);
+        /* height: auto; */
+        padding: 0 1em;
+
     }
 }
 
@@ -326,5 +400,30 @@ main section .underline hr {
         display: inline-block;
         /* Usamos inline block para que se muestre en linea, y lo de block para que pueda contener un elemento en bloque, en este caso los a que les hemos puesto display:block; */
     }
+
+    main .grid {
+
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    main .grid article {
+        border: 0px;
+        width: 33.333%;
+        border-left: 2px solid #aaa;
+        margin: var(--margingrid);
+        /* height: auto; */
+        padding: 0 1em;
+
+    }
+
+    main .grid article:last-child {
+        width: 33.333%;
+
+    }
+
 
 }
