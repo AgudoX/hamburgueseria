@@ -236,6 +236,45 @@ footer a:hover {
 
 /* Hero-end */
 
+/* Our-Service-Start */
+
+main section {
+    padding: 2.125em 1.5em;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuente-titulos);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--color-principal);
+}
+
+main section .underline {
+    position: relative;
+    /* Alinear el hr */
+    width: 6.250em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: 700;
+    /* Le damos 700 pq es lo que hemos importando de google fonts */
+    text-align: center;
+}
+
+main section .underline span {
+    position: absolute;
+    top: -0.4em;
+
+}
+
+main section .underline hr {
+    color: var(--color-principal);
+}
+
+/* Our-Service-end */
 
 
 
