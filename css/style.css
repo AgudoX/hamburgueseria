@@ -407,7 +407,10 @@ main section .flex figure.imagen:hover :is(.marco, .marco img) {
 
     main section .flex figure.imagen {
         margin: 0 2.5em;
+        width: 130%;
     }
+
+
 }
 
 
@@ -449,6 +452,11 @@ main section .flex figure.imagen:hover :is(.marco, .marco img) {
         /* height: auto; */
         padding: 0 1em;
 
+    }
+
+    main section .flex figure.imagen .marco {
+        margin: 0 2em;
+        width: auto;
     }
 }
 
