@@ -185,7 +185,8 @@ footer a:hover {
 
 }
 
-.hero .boton {
+
+.boton {
     display: inline-block;
     /* El elemento se comporta como un bloque pero se puede poner en linea. */
     background-color: var(--color-principal);
@@ -195,7 +196,7 @@ footer a:hover {
     border: 1px solid var(--color-principal);
 }
 
-.hero :is(h2, .boton) {
+:is(h2, .boton) {
     margin: var(--margingrid) 0;
 }
 
@@ -205,6 +206,7 @@ footer a:hover {
 
 .boton:hover {
     background-color: transparent;
+    color: var(--color-principal);
 }
 
 .boton i {
@@ -323,10 +325,47 @@ main .grid a {
 
 /* About-us-start */
 
-div.aboutus {
-    height: 100vh;
+main #aboutus {
+    margin-bottom: 4.375em;
 }
 
+main section .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+main section .flex h3 {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+main section .flex h4 {
+    font-size: 1em;
+    margin: var(--margingrid) 0;
+    color: var(--color-principal);
+}
+
+main section .flex figure.imagen {
+    width: 95%;
+    margin: 2.5em auto;
+}
+
+main section .flex figure.imagen .marco {
+    border: 3px solid var(--color-principal);
+    transition: 1s;
+    transform: rotateZ(10deg)
+}
+
+main section .flex figure.imagen .marco img {
+    transform: rotateZ(-10deg);
+    /* Rotamos la imagen de nuevo para que se quede recta. */
+    transition: 1s;
+}
+
+main section .flex figure.imagen:hover :is(.marco, .marco img) {
+    transform: rotateZ(0deg);
+    /* llevamos ambos al */
+}
 
 
 /* About-us-end */
@@ -359,7 +398,21 @@ div.aboutus {
         /* height: auto; */
         padding: 0 1em;
     }
+
+    main section .flex {
+        margin-top: 2.5em;
+        flex-direction: row;
+    }
+
+
+    main section .flex figure.imagen {
+        margin: 0 2.5em;
+    }
 }
+
+
+
+
 
 @media (min-width: 48em) {
     /* 768 px tablet grande, pantalla pequeña */
