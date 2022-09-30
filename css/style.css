@@ -291,6 +291,7 @@ main .grid i:is(.fa-cogs, .fa-truck, .fa-heart) {
 
 main .grid i.fa-truck {
     transform: scaleX(-1);
+    /* transform: rotateY(180deg) haría lo mismo */
 
 }
 
@@ -302,8 +303,10 @@ main .grid h3 {
 
 main .grid p {
     color: var(--colorsecundario);
-    font-size: 0.8em;
+    font-size: 0.95em;
     margin: 0.5em 0em;
+    line-height: 1.25em;
+    /* El interlineado va en función del tamaño de la fuente, si pongo line-height de 1 em no variaría */
 
 }
 
@@ -332,7 +335,30 @@ div.aboutus {
 
 
 @media (min-width: 37.5em) {
+
     /* 600px */
+    main .grid article:last-child {
+        width: 100%;
+
+
+    }
+
+    main .grid {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main .grid article {
+        border: 0px;
+        height: auto;
+        width: 40%;
+        border-left: 2px solid #aaa;
+        margin: var(--margingrid);
+        /* height: auto; */
+        padding: 0 1em;
+    }
 }
 
 @media (min-width: 48em) {
