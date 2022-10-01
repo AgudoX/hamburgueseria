@@ -371,6 +371,154 @@ main section .flex figure.imagen:hover :is(.marco, .marco img) {
 /* About-us-end */
 
 
+/* Our-Blogs-Start */
+
+main .flex-2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+
+
+main .flex-2 article {
+    width: 40%;
+    margin: 1em;
+    position: relative;
+
+
+}
+
+main .flex-2 article .fecha {
+    position: absolute;
+    background-color: rgba(250, 87, 58, 0.7);
+    /* He sacado el rgba del color principal para meterle opacity */
+    padding: 0.8em;
+    height: 4em;
+    color: white;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.4em;
+    transition: 1s;
+}
+
+main .flex-2 article .fecha:hover {
+    color: var(--colorsecundario);
+    /* ¿Como se haría una animación en la que la fecha ocupase el 100% de la imagen */
+}
+
+
+
+main .flex-2 article h3 {
+    font-weight: 700;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin: var(--margingrid) 0;
+}
+
+main .flex-2 article small {
+    font-size: 0.8em;
+    color: var(--color-principal);
+    font-weight: 700;
+}
+
+main .flex-2 article p {
+    color: var(--colorsecundario);
+    font-size: 0.7em;
+    margin: var(--margingrid) 0em;
+    line-height: 1.5em;
+}
+
+main .flex-2 article a {
+    font-size: 0.8em;
+    color: var(--color-principal);
+    font-weight: 700;
+    transition: 1s;
+    text-decoration: none;
+}
+
+main .flex-2 article a:hover {
+    font-size: 1.2em;
+    color: var(--color-secundario);
+}
+
+/* Our-Blogs-End */
+
+
+/* Menu-Start */
+section#menu {
+    background-color: var(--colorsecundario);
+    padding-bottom: 6em;
+}
+
+section#menu h2 {
+    color: white;
+}
+
+.flex-3 {
+    width: 95%;
+}
+
+.flex-3 ul li {
+    color: white;
+    margin: var(--margingrid) 0em;
+    font-size: 0.8em;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+.flex-3 ul li:hover {
+    background-color: var(--color-principal);
+}
+
+.flex-3 .offers {
+    margin: 2em 0;
+}
+
+.flex-3 :is(.offers h3, .meal h3) {
+    color: white;
+    font-weight: 700;
+}
+
+.flex-3 .offers div.bar {
+    background-color: var(--color-principal);
+    height: 0.1em;
+    width: 3em;
+    margin: 0.7em 0em;
+}
+
+.flex-3 :is(.offers p, .meal p) {
+    color: #aaa;
+    font-size: 0.7em;
+    margin: var(--margingrid) 0em;
+    line-height: 1.5em;
+}
+
+.flex-3 .meal {
+    width: 90%;
+    margin: 2em auto;
+}
+
+.flex-3 .meal a {
+    display: block;
+    font-size: 0.8em;
+    color: var(--color-principal);
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 2.5em;
+}
+
+.flex-3 .meal h3 {
+    margin: 1em 0;
+}
+
+.flex-3 .meal span {
+    color: var(--color-principal);
+    margin-left: 1em;
+}
+
+/* Menu-End */
 
 
 @media (min-width: 37.5em) {
@@ -458,6 +606,75 @@ main section .flex figure.imagen:hover :is(.marco, .marco img) {
         margin: 0 2em;
         width: auto;
     }
+
+    /* Our-blogs-start */
+    main .flex-2 {
+
+        flex-wrap: nowrap;
+
+    }
+
+
+
+    main .flex-2 article {
+        width: 40%;
+
+
+
+    }
+
+    /* Our-Blogs-End */
+
+
+    /* Menu-Start */
+    .flex-3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .flex-3>div {
+        width: 20%;
+    }
+
+    .flex-3 .meal {
+        width: 65%;
+    }
+
+    .meal article {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .meal article:nth-child(2) {
+        margin: 2em 0;
+
+    }
+
+    .meal article figure {
+        width: 25%;
+    }
+
+    .meal article div {
+        width: 65%;
+    }
+
+    .flex-3 ul li {
+
+        padding: 0.8em;
+    }
+
+    .flex-3 .offers {
+        margin: 6em 0;
+    }
+
+    .flex-3 .meal h3 {
+        margin: 0em 0;
+    }
+
+    /* Menu-End */
 }
 
 
